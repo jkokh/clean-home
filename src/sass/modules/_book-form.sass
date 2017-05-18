@@ -1,0 +1,20 @@
+@import "../utilities/mixins"
+@import "../utilities/variables"
+
+.book-form
+  background-color: rgba(0, 0, 0, 0.77)
+  width: 300px
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  color: white
+  padding: 20px
+
+  +e('header')
+    color: $font-color-orange
+
+  +e('field')
+    input, select
+      width: 100%
+    margin-bottom: 1rem

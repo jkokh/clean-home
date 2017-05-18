@@ -1,0 +1,21 @@
+@import "../utilities/mixins"
+@import "../utilities/variables"
+
+.hero
+  background: url('../images/promo.jpg') repeat-x center
+
+  +e('wrapper')
+    position: relative
+    height: 600px
+
+  +e('title')
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    color: white
+    font-size: 60px
+    span
+      display: block
+      text-transform: uppercase
+      font-size: 98px

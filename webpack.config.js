@@ -30,8 +30,10 @@ module.exports = {
                 test: /\.sass|\.css|\.scss/,
                 use: cssConfig
             },
+
             { test: /\.(woff2?|svg)$/, loader: require.resolve('url-loader') + '?limit=10000&name=fonts/[name].[ext]&publicPath=../' },
-            { test: /\.(ttf|eot)$/, loader: require.resolve('file-loader') + '?name=fonts/[name].[ext]&publicPath=../' }
+            { test: /\.(ttf|eot)$/, loader: require.resolve('file-loader') + '?name=fonts/[name].[ext]&publicPath=../' },
+            { test: /\.(jpg|png)$/, loader: require.resolve('file-loader') + '?name=images/[name].[ext]&publicPath=../' }
         ]
     },
     devServer: {
