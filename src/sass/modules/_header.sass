@@ -1,0 +1,31 @@
+@import "../utilities/mixins"
+@import "../utilities/variables"
+
+.header
+  padding-top: 18px
+  padding-bottom: 19px
+
+  +e('logo')
+    font-size: 36px
+    color: $font-color-green
+    margin-bottom: 0
+    span
+      color: $font-color-orange
+
+  %vertical-align
+    display: inline-block
+    vertical-align: middle
+
+  +e('call')
+    @extend %vertical-align
+    font-size: 18px
+
+  +e('phone')
+    @extend %vertical-align
+    font-weight: 700
+    font-size: 36px
+    color: $font-color-green
+    text-decoration: none
+    &:hover, &:active, &:visited, &:link
+      color: $font-color-green
+      text-decoration: none
