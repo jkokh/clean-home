@@ -1,0 +1,24 @@
+1).
+
+npm init
+
+2).
+
+npm install bootstrap bootstrap-loader bootstrap-sass css-loader exports-loader extract-text-webpack-plugin file-loader html-webpack-plugin imports-loader node-sass postcss-loader resolve-url-loader rimraf sass-loader style-loader url-loader webpack webpack-dev-server --save-dev
+
+3).
+
+Add script commands into package.json:
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "prod": "npm run clean && NODE_ENV=production && webpack -p",
+    "clean": "rimraf ./dist"
+  },
+
+4).
+
+Current version of bootstrap css framework is 3, to install beta 4 do:
+npm view bootstrap --version
+and get the latest alpha or beta version
+
+then: npm install bootstrap@4.0.0-alpha.6 --save-dev (for instance)
