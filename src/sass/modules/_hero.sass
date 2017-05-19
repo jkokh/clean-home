@@ -1,22 +1,90 @@
 @import "../utilities/mixins"
 @import "../utilities/variables"
+@import "~bootstrap/scss/mixins"
+@import "~bootstrap/scss/variables"
+
+.book-form
+  background-color: rgba(0, 0, 0, 0.7)
+  width: 300px
+  min-width: 300px
+  text-align: center
+  font-weight: 300
+  color: white
+  padding: 49px 30px 30px
+
+  +e('button')
+    background-color: $font-color-green2
+    color: white
+    border: none
+    border-radius: 3px
+    width: 100%
+    height: 60px
+    margin-top: 15px
+
+  input, select
+    height: 40px
+    margin-bottom: 0
+    border-radius: 2px
+    border: none
+    padding-left: 10px
+    padding-right: 10px
+    &::-moz-placeholder, &::-webkit-input-placeholder, &:-ms-input-placeholder
+      color: #555555
+      font-weight: 200
+
+  +e('header')
+    font-weight: normal
+    color: $font-color-orange
+    font-size: 32px
+    margin-bottom: 25px
+
+  +e('field')
+    margin-bottom: 10px
+    input, select
+      width: 100%
+
+  +e('label')
+    margin-top: 15px
 
 .hero
-  background: url('../images/promo.jpg') repeat-x center
   margin-bottom: 0
+  background: black url('../images/promo.jpg') repeat-x center top
+
   +e('wrapper')
     position: relative
     height: 600px
     margin-bottom: 0
+    display: flex
+    flex-direction: row
+    align-content: center
 
   +e('title')
-    position: absolute
-    top: 50%
-    left: 0
-    transform: translateY(-50%)
+    flex-grow: 1
+    margin: auto
     color: white
     font-size: 60px
     span
       display: block
       text-transform: uppercase
       font-size: 98px
+
+  @include media-breakpoint-down(sm)
+    +e('title')
+      text-align: center
+      font-size: 30px
+      margin: 20px 40px
+      span
+        margin-top: 15px
+        font-size: 50px
+    .container
+      padding: 0
+      margin: 0
+      width: 100%
+    +e('wrapper')
+      height: auto
+      flex-direction: column
+      .book-form
+        background-color: black
+        width: 100%
+
+

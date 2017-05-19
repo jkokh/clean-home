@@ -1,9 +1,19 @@
 @import "../utilities/mixins"
 @import "../utilities/variables"
+@import "~bootstrap/scss/mixins"
+@import "~bootstrap/scss/variables"
 
 .header
   padding-top: 18px
   padding-bottom: 19px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+  +e('item')
+    flex-grow: 1
+    +m('first')
+      flex-grow: 9
 
   +e('logo')
     font-size: 36px
@@ -29,3 +39,13 @@
     &:hover, &:active, &:visited, &:link
       color: $font-color-green
       text-decoration: none
+
+  @include media-breakpoint-down(sm)
+    +e('phone')
+      font-size: 27px
+    display: block
+    +e('item')
+      +m('first')
+        margin-bottom: 20px
+
+
