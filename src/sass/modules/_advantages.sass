@@ -1,0 +1,37 @@
+@import "../utilities/mixins"
+@import "../utilities/variables"
+
+.advantages-list
+  padding: 0
+  list-style-type: none
+  display: flex
+  flex-grow: 1
+  justify-content: space-between
+  margin: 0 -10px
+  flex-wrap: wrap
+
+  +e('item-header')
+    font-size: 24px
+
+  +e('item')
+    &:before
+      content: ''
+      display: block
+      height: 101px
+      background: url('../images/professionals.png') center no-repeat
+      margin-bottom: 25px
+
+    max-width: 340px
+    min-width: 200px
+    padding-left: 10px
+    padding-right: 10px
+    text-align: center
+    margin: 0 auto 20px
+
+    +m('availability')
+      &:before
+        background: url('../images/availability.png') center no-repeat
+
+    +m('satisfaction')
+      &:before
+        background: url('../images/satisfaction.png') center no-repeat

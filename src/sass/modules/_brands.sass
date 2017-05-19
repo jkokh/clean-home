@@ -1,0 +1,19 @@
+@import "../utilities/mixins"
+@import "../utilities/variables"
+
+.brands
+  background-color: #ececea
+  padding-top: 20px
+  padding-bottom: 20px
+
+.brands-list
+  margin: 0
+  padding: 0
+  list-style-type: none
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+  +e('item')
+    margin: 10px
+
