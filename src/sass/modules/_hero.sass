@@ -21,17 +21,6 @@
     height: 60px
     margin-top: 15px
 
-  input, select
-    height: 40px
-    margin-bottom: 0
-    border-radius: 2px
-    border: none
-    padding-left: 10px
-    padding-right: 10px
-    &::-moz-placeholder, &::-webkit-input-placeholder, &:-ms-input-placeholder
-      color: #555555
-      font-weight: 200
-
   +e('header')
     font-weight: normal
     color: $font-color-orange
@@ -68,7 +57,7 @@
       text-transform: uppercase
       font-size: 98px
 
-  @include media-breakpoint-down(sm)
+  +media-breakpoint-down(sm)
     +e('title')
       text-align: center
       font-size: 30px
